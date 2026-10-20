@@ -12,7 +12,10 @@ class MyApp extends StatelessWidget {
           child: Column(
             children: [
               Text("Привет, Flutter!"),
-              ElevatedButton(onPressed: (){print("Hello, world!");}, child: const Text("Test"))
+              ElevatedButton(onPressed: (){print("Hello, world!");}, child: const Text("Test")),
+              Text("Город"),
+              Text("Имя"),
+              Icon(Icons.account_circle)
             ],
           )
         ),
