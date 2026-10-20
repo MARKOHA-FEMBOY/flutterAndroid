@@ -9,27 +9,35 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         body: SafeArea(
-          child: Column(
+          child: Stack(
             children: [
-              Row(
-                children: [
-                  SizedBox(width: 180,),
-                  Text("Markoha", style: TextStyle(
-                    fontSize: 24, 
-                  ),),
-                  SizedBox(width: 70,),
-                  Icon(Icons.account_circle, size: 48),
-                ],
+              Center(
+                child: Text("Привет, Flutter!")
               ),
-              Row(
-                children: [
-                  Text('Привет, Flutter!'),
-                  Text('Город'),
-                  Text('Имя')
-                ],
-              ),  
+              Align(
+                alignment: Alignment.topCenter,
+                child: Text(
+                  "MARKOHA",
+                  style: TextStyle(
+                    fontSize: 24,
+                  ),
+                  ),
+              ),
+              Align(
+                alignment: Alignment.topRight,
+                child: Padding(
+                  padding: EdgeInsets.only(right: 24),
+                  child: Transform.translate(
+                    offset: Offset(0, -8),
+                    child: Icon(
+                      Icons.account_circle,
+                      size: 48,
+                    ),
+                  )
+                  ),
+              )
             ],
-          )
+          ),
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: (){}, 
