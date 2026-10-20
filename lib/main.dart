@@ -13,8 +13,12 @@ class MyApp extends StatelessWidget {
             children: [
               Row(
                 children: [
-                  Text("Markoha"),
-                  Icon(Icons.account_circle),
+                  SizedBox(width: 180,),
+                  Text("Markoha", style: TextStyle(
+                    fontSize: 24, 
+                  ),),
+                  SizedBox(width: 70,),
+                  Icon(Icons.account_circle, size: 48),
                 ],
               ),
               Row(
@@ -23,15 +27,14 @@ class MyApp extends StatelessWidget {
                   Text('Город'),
                   Text('Имя')
                 ],
-              ),
-              Row(
-                children: [
-                  ElevatedButton(onPressed: (){}, child: Icon(Icons.add_circle))
-                ],
-              )
+              ),  
             ],
           )
         ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: (){}, 
+          child: Icon(Icons.add),
+        )
       ),
     );
   }
