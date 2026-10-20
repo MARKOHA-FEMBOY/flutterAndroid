@@ -8,14 +8,27 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        body: Center(
+        body: SafeArea(
           child: Column(
             children: [
-              Text("Привет, Flutter!"),
-              ElevatedButton(onPressed: (){print("Hello, world!");}, child: const Text("Test")),
-              Text("Город"),
-              Text("Имя"),
-              Icon(Icons.account_circle)
+              Row(
+                children: [
+                  Text("Markoha"),
+                  Icon(Icons.account_circle),
+                ],
+              ),
+              Row(
+                children: [
+                  Text('Привет, Flutter!'),
+                  Text('Город'),
+                  Text('Имя')
+                ],
+              ),
+              Row(
+                children: [
+                  ElevatedButton(onPressed: (){}, child: Icon(Icons.add_circle))
+                ],
+              )
             ],
           )
         ),
